@@ -1,37 +1,52 @@
 import React, { Component } from 'react';
 import { carouselData } from '../../data'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import styled from 'styled-components';
+
+
+
 // Complete this Carousel 
-export default class Carousel extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-     carousel: []
-    }
-  }
-  componentDidMount(){
-    this.setState({carousel:carouselData})
-  }
 
-  leftClick = () => {
 
-  }
+const CarouselDiv = styled.div`
+   max-width: 71%;
+   margin-top: 16px;
+   
+`
 
-  rightClick = () => {
-    this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1
-    }));
-  }
+class DemoCarousel extends Component {
 
-  selectedImage = () => {
-    return <img src={this.state.carousel} style={{display: 'block'}} />
-  }
-  
-  render(){
+  render() {
     return (
-      <div className="carousel">
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
-    )
+      <CarouselDiv>
+        <Carousel
+          showStatus={false}
+          infiniteLoop
+          showThumbs={false} 
+          autoPlay
+          >
+
+          <div>
+            <img src="assets/carousel/mountains.jpeg" />
+
+          </div>
+          <div>
+            <img src="./assets/carousel/computer.jpeg" />
+
+          </div>
+          <div>
+            <img src="./assets/carousel/trees.jpeg" />
+
+          </div>
+          <div>
+            <img src="./assets/carousel/turntable.jpeg" />
+
+          </div>
+        </Carousel>
+      </CarouselDiv>
+    );
   }
-}
+};
+
+export default DemoCarousel
