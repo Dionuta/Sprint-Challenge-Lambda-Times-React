@@ -16,7 +16,14 @@ const CarouselDiv = styled.div`
 `
 
 class DemoCarousel extends Component {
+    
+   state ={
+     carousel:[]
+   }
 
+  componentDidMount(){
+   this.setState({carousel: carouselData})
+  }
   render() {
     return (
       <CarouselDiv>
@@ -24,23 +31,23 @@ class DemoCarousel extends Component {
           showStatus={false}
           infiniteLoop
           showThumbs={false} 
-          autoPlay
+         
           >
 
           <div>
-            <img src="assets/carousel/mountains.jpeg" />
+            <img src={this.state.carousel.img1} />
 
           </div>
           <div>
-            <img src="./assets/carousel/computer.jpeg" />
+            <img src={this.state.carousel.img2} />
 
           </div>
           <div>
-            <img src="./assets/carousel/trees.jpeg" />
+            <img src={this.state.carousel.img3} />
 
           </div>
           <div>
-            <img src="./assets/carousel/turntable.jpeg" />
+            <img src={this.state.carousel.img4} />
 
           </div>
         </Carousel>
