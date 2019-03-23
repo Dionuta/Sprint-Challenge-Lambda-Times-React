@@ -94,11 +94,12 @@ export const cardData = [
     img: "./assets/max.jpg",
     author: "MAX GOODBOYE"
   }
+  
 ]
 
-export const carouselData = [
-  "./assets/carousel/mountains.jpeg",
-  "./assets/carousel/computer.jpeg",
-  "./assets/carousel/trees.jpeg",
-  "./assets/carousel/turntable.jpeg"
-]
+export const carouselData = {
+   img: "./assets/carousel/mountains.jpeg",
+    1: "./assets/carousel/computer.jpeg",
+    2: "./assets/carousel/trees.jpeg",
+    3: "./assets/carousel/turntable.jpeg"
+}
