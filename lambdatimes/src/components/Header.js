@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const HeaderDiv = styled.div`
 display: flex;
+position: relative;
 justify-content: space-between;
 align-items: center;
 flex-direction: row;
@@ -51,7 +52,7 @@ flex: 1;
 const Header = () => {
   return (
     <HeaderDiv>
-      <Date>SMARCH 32, 2018</Date>
+      <Date>MARCH 22, 2019</Date>
       <h1>Lambda Times</h1>
       <Temp>98°</Temp>
     </HeaderDiv>

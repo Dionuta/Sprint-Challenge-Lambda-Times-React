@@ -8,6 +8,7 @@ justify-content: center;
 align-items: none;
 flex-direction: row;
 position: fixed;
+z-index:99;
 height: 44px;
 background-color: #333;
 `
