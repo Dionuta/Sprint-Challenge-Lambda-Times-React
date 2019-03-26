@@ -3,6 +3,7 @@ import TopBar from './components/TopBar';
 import Header from './components/Header';
 import Content from './components/Content/Content';
 import styled from 'styled-components';
+import withAuthenticate from './components/Authentication/withAuthenticate'
 
 const AppDiv= styled.div`
 display: flex;
@@ -19,9 +20,11 @@ const App = () => {
     <AppDiv>
       <TopBar />
       <Header />
-      <Content />
+      <HOCwithAuthenticate/>
     </AppDiv>
   );
 }
+
+const HOCwithAuthenticate = withAuthenticate(Content);
 
 export default App;
