@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Moment from 'moment'
+
 const HeaderDiv = styled.div`
 display: flex;
 position: relative;
@@ -52,7 +52,7 @@ flex: 1;
 const Header = () => {
   return (
     <HeaderDiv>
-      <Date>  <Moment>{moment().format("MMM Do YY")}</Moment></Date>
+      <Date>MARCH 22, 2019</Date>
       <h1>Lambda Times</h1>
       <Temp>98°</Temp>
     </HeaderDiv>
